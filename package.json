@@ -1,6 +1,6 @@
 {
   "name": "covid-vaccine-tracker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Tracker to Check the availability of vaccine through pincode and buzzer in case of availability",
   "homepage": "https://github.com/ayu023ban/covid-vaccine-tracker#readme",
   "main": "app.js",
