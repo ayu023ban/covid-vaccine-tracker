@@ -11,10 +11,23 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "ayush bansal",
   "email": "ayu023ban@gmail.com",
   "url": "https://ayu023ban.github.io/",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": [
+    "covid",
+    "vaccine",
+    "tracker",
+    "buzzer",
+    "alarm",
+    "notification",
+    "notifier",
+    "covid19",
+    "corona",
+    "covaxin",
+    "covishield"
+  ]
 }

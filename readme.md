@@ -55,3 +55,16 @@ alternatively you can also use
 ```
 yarn start
 ```
+
+## Flags
+
+- ### hide-output
+  hides the message of trying again and again and only show result if it has found vaccine.
+- ### mute-sound
+  mutes the buzzer sound on finding the vaccine.
+
+# Example Commands
+
+- `npm start hide-output`
+- `npm start mute-sound`
+- `npm start hide-output mute-sound`

@@ -7,7 +7,11 @@ const fetchByPincode = async () => {
   const dates = getDates();
   for (let i = 0; i < pincodes.length; i++) {
     for (let j = 0; j < dates.length; j++) {
-      console.log(`Trying for ${pincodes[i]} pincode and for ${dates[j]} date`);
+      if (process.argv.every((el) => el !== "hide-output")) {
+        console.log(
+          `Trying for ${pincodes[i]} pincode and for ${dates[j]} date`
+        );
+      }
       let url = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=${pincodes[i]}&date=${dates[j]}`;
       axios
         .get(url, {
@@ -27,7 +31,9 @@ const fetchByPincode = async () => {
                   data.centers[c].name,
                   data.centers[c].sessions[s].available_capacity
                 );
-                player.play("./beep.mp3");
+                if (process.argv.every((el) => el !== "mute-sound")) {
+                  player.play("./beep.mp3");
+                }
               }
             }
           }
