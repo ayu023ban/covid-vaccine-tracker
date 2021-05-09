@@ -1,6 +1,6 @@
 {
   "name": "covid-vaccine-tracker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Tracker to Check the availability of vaccine through pincode and buzzer in case of availability",
   "homepage": "https://github.com/ayu023ban/covid-vaccine-tracker#readme",
   "main": "app.js",
@@ -16,6 +16,10 @@
   "author": "ayush bansal",
   "email": "ayu023ban@gmail.com",
   "url": "https://ayu023ban.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayu023ban/covid-vaccine-tracker"
+  },
   "license": "ISC",
   "keywords": [
     "covid",
