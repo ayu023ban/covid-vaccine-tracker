@@ -1,8 +1,9 @@
 {
-  "name": "covid",
+  "name": "covid-vaccine-tracker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Tracker to Check the availability of vaccine through pincode and buzzer in case of availability",
+  "homepage": "https://github.com/ayu023ban/covid-vaccine-tracker#readme",
+  "main": "app.js",
   "dependencies": {
     "axios": "^0.21.1",
     "nodemon": "^2.0.7",
@@ -12,6 +13,8 @@
   "scripts": {
     "start": "nodemon app.js"
   },
-  "author": "",
+  "author": "ayush bansal",
+  "email": "ayu023ban@gmail.com",
+  "url": "https://ayu023ban.github.io/",
   "license": "ISC"
 }

@@ -1,2 +1,2 @@
-const { fetchByPincode } = require("./fetch");
-fetchByPincode();
+const { fetchIteratively } = require("./fetch");
+fetchIteratively();

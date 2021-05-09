@@ -1,39 +1,13 @@
 const { default: axios } = require("axios");
+const { checkingDuration, pincodes } = require("./config");
+const { getDates, sleepNow } = require("./utils");
 const player = require("play-sound")((opts = {}));
-
-const pincodes = ["335051"];
-const checkingDuration = 5000;
-
-const sleepNow = (delay) =>
-  new Promise((resolve) => setTimeout(resolve, delay));
-
-const getDateReprest = (date) => {
-  let dd = date.getDate();
-  let mm = date.getMonth() + 1;
-  let yyyy = date.getFullYear();
-  if (dd < 10) {
-    dd = "0" + dd;
-  }
-
-  if (mm < 10) {
-    mm = "0" + mm;
-  }
-  strRepresent = dd + "-" + mm + "-" + yyyy;
-  return strRepresent;
-};
-
-const getDates = () => {
-  const today = new Date();
-  const tomorrow = new Date(today);
-  tomorrow.setDate(tomorrow.getDate() + 1);
-  const date = [getDateReprest(today), getDateReprest(tomorrow)];
-  return date;
-};
 
 const fetchByPincode = async () => {
   const dates = getDates();
   for (let i = 0; i < pincodes.length; i++) {
     for (let j = 0; j < dates.length; j++) {
+      console.log(`Trying for ${pincodes[i]} pincode and for ${dates[j]} date`);
       let url = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=${pincodes[i]}&date=${dates[j]}`;
       axios
         .get(url, {
@@ -61,8 +35,13 @@ const fetchByPincode = async () => {
         .catch((err) => console.log(err.response));
     }
   }
-  await sleepNow(5000);
-  fetchByPincode();
 };
 
-module.exports = { fetchByPincode };
+const fetchIteratively = async () => {
+  while (true) {
+    fetchByPincode();
+    await sleepNow(checkingDuration * 1000);
+  }
+};
+
+module.exports = { fetchIteratively };
