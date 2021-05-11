@@ -24,7 +24,7 @@ const getDates = () => {
   const today = new Date();
   const tomorrow = new Date(today);
   tomorrow.setDate(tomorrow.getDate() + 1);
-  const date = [getDateReprestation(today), getDateReprestation(tomorrow)];
+  const date = [getDateReprestation(tomorrow)];
   return date;
 };
 
@@ -38,12 +38,7 @@ const fetchByPincode = async () => {
     for (let j = 0; j < dates.length; j++) {
       let url = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=${pincode}&date=${dates[j]}`;
       axios
-        .get(url, {
-          headers: {
-            accept: "application/json",
-            "Accept-Language": "hi_IN",
-          },
-        })
+        .get(url)
         .then((res) => {
           let data = res.data;
           let centers = [];
@@ -101,7 +96,8 @@ const fetchByPincode = async () => {
 const fetchIteratively = async () => {
   while (true) {
     fetchByPincode();
-    await sleepNow(5 * 1000);
+    const timeToSleep = store.getState().pincodes.pincodes.length * 5;
+    await sleepNow(timeToSleep * 1000);
   }
 };
 
