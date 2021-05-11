@@ -1,4 +1,6 @@
 {
+  "name": "covid-vaccine-tracker",
+  "homepage": "https://ayu023ban.github.io/covid-vaccine-tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
