@@ -32,7 +32,9 @@ const fetchByPincode = async () => {
   const dates = getDates();
   const result = store.getState().result.result;
   const pincodes = store.getState().pincodes.pincodes.filter((pincode) => {
-    return result[pincode].status === "finding";
+    return (
+      result[pincode].status === "finding" || result[pincode].status === "error"
+    );
   });
   for (const pincode of pincodes) {
     for (let j = 0; j < dates.length; j++) {
