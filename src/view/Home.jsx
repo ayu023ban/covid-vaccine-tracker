@@ -205,7 +205,7 @@ const Home = () => {
           Keep Browser open in background in order for this app to work.
           <br />
           <br />
-          Also keep a the volume of media as high as possible.
+          Also keep the volume of media as high as possible.
         </Header>
       </Container>
     </Container>
