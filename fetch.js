@@ -38,7 +38,7 @@ const fetchByPincode = async () => {
             }
           }
         })
-        .catch((err) => console.log(err.response));
+        .catch((err) => console.log(err.response.data));
     }
   }
 };

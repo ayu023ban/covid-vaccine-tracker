@@ -4,6 +4,8 @@ A Tracker to Check the availability of vaccine through pincode and buzzer in cas
 
 ### 🏠 [Homepage](https://github.com/ayu023ban/covid-vaccine-tracker#readme)
 
+### 🌐 [Web Interface](https://ayu023ban.github.io/covid-vaccine-tracker/)
+
 ## Prerequisites
 - Git
 - Node
@@ -65,6 +67,9 @@ yarn start
 - `npm start hide-output`
 - `npm start mute-sound`
 - `npm start hide-output mute-sound`
+
+
+### Link to the web interface: https://ayu023ban.github.io/covid-vaccine-tracker/
 
 ***
 ## Author
