@@ -176,9 +176,12 @@ const Home = () => {
                       </Header>
                       <List bulleted>
                         {result[pincode].centers &&
-                          result[pincode].centers.map((center) => (
-                            <List.Item>{center}</List.Item>
-                          ))}
+                          result[pincode].centers
+                            .filter(
+                              (center, index, ar) =>
+                                ar.indexOf(center) === index
+                            )
+                            .map((center) => <List.Item>{center}</List.Item>)}
                       </List>
                     </Segment>
                   </>
@@ -200,6 +203,9 @@ const Home = () => {
       <Container fluid className="footer mt-4">
         <Header inverted textAlign="center">
           Keep Browser open in background in order for this app to work.
+          <br />
+          <br />
+          Also keep a the volume of media as high as possible.
         </Header>
       </Container>
     </Container>
