@@ -1,4 +1,9 @@
+#root {
+  min-height: 100vh;
+}
 .main-header-container {
+  flex-shrink: 0;
+
   min-height: 400px;
   background: rgba(0, 0, 0, 0.5);
   background-position: 50% 50%;
@@ -24,4 +29,25 @@
   line-height: 1.2 !important;
   font-size: 5rem !important;
   font-weight: 700;
+}
+.footer {
+  min-height: 100px;
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  flex-shrink: 0;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  background-image: url("./assets/14.jpg");
+  background-size: cover;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
