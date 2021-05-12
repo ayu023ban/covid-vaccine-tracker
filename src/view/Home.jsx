@@ -15,6 +15,7 @@ import {
 import { add, remove } from "../redux/reducer/pincode";
 import { changeResult, deleteResult } from "../redux/reducer/result";
 import { fetchIteratively } from "./fetch";
+import GoogleAd from "./GoogleAd";
 
 const Home = () => {
   const [pincode, setPincode] = useState("");
@@ -199,6 +200,15 @@ const Home = () => {
             </Message>
           </Container>
         )}
+        <GoogleAd slot={"3472273087"} />
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-9552396768426571"
+          data-ad-slot="3472273087"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
       </Container>
       <Container fluid className="footer mt-4">
         <Header inverted textAlign="center">
