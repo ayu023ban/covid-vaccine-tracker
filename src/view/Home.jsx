@@ -206,9 +206,20 @@ const Home = () => {
         <Header inverted textAlign="center">
           Keep Browser open in background in order for this app to work.
           <br />
-          <br />
           Also keep the volume of media as high as possible.
         </Header>
+        <Divider />
+        <div className="credit">
+          <a href={"https://ayu023ban.github.io/"} target="_blank">
+            <div>{`Designed & Built by Ayush Bansal`}</div>
+          </a>
+          <a
+            href="https://github.com/ayu023ban/covid-vaccine-tracker/"
+            target="_blank"
+          >
+            <span>{`github.com/ayu023ban/covid-vaccine-tracker @ GitHub`}</span>
+          </a>
+        </div>
       </Container>
     </Container>
   );

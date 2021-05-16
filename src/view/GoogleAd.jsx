@@ -28,6 +28,7 @@ class GoogleAd extends Component {
           data-ad-client={googleAdId}
           data-ad-slot={slot}
           data-ad-format="auto"
+          data-adtest="on"
           data-full-width-responsive="true"
         ></ins>
       </div>
