@@ -71,6 +71,8 @@ yarn start
 
 ### Link to the web interface: https://ayu023ban.github.io/covid-vaccine-tracker/
 
+### Code of the web interface is in `web` branch
+
 ***
 ## Author
 
